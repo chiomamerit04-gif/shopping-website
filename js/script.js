@@ -1,86 +1,86 @@
 let product1 = {
-    id: 1,
-    image: "images/bag.png",
-    name: "Fashion Bag",
-    price: 800,
-    button: "ADD TO CART"
+  id: 1,
+  image: "images/bag.webp",
+  name: "Fashion Bag",
+  price: 800,
+  button: "ADD TO CART",
 };
 let product2 = {
-    id: 2,
-    image: "images/bag2.png",
-    name: "LV Bag",
-    price: 1500,
-    button: "ADD TO CART"
+  id: 2,
+  image: "images/bag2.png",
+  name: "LV Bag",
+  price: 1500,
+  button: "ADD TO CART",
 };
 let product3 = {
-    id: 3,
-    image: "images/dresses.png",
-    name: "Floral Dress",
-    price: 120,
-    button: "ADD TO CART"
+  id: 3,
+  image: "images/dresses.png",
+  name: "Floral Dress",
+  price: 120,
+  button: "ADD TO CART",
 };
 let product4 = {
-    id: 4,
-    image: "images/dresses2.png",
-    name: "Party Dress",
-    price: 160,
-    button: "ADD TO CART"
+  id: 4,
+  image: "images/dresses2.png",
+  name: "Party Dress",
+  price: 160,
+  button: "ADD TO CART",
 };
 let product5 = {
-    id: 5,
-    image: "images/dresses3.png",
-    name: "Chic Dress",
-    price: 200,
-    button: "ADD TO CART"
+  id: 5,
+  image: "images/dresses3.png",
+  name: "Chic Dress",
+  price: 200,
+  button: "ADD TO CART",
 };
 let product6 = {
-    id: 6,
-    image: "images/dresses4.png",
-    name: "Dinner Dress",
-    price: 600,
-    button: "ADD TO CART"
+  id: 6,
+  image: "images/dresses4.png",
+  name: "Dinner Dress",
+  price: 600,
+  button: "ADD TO CART",
 };
 let product7 = {
-    id: 7,
-    image: "images/earring.png",
-    name: "Silver Earrings",
-    price: 200,
-    button: "ADD TO CART"
+  id: 7,
+  image: "images/earring.png",
+  name: "Silver Earrings",
+  price: 200,
+  button: "ADD TO CART",
 };
 let product8 = {
-    id: 8,
-    image: "images/earring2.png",
-    name: "Gold Earrings",
-    price: 200,
-    button: "ADD TO CART"
+  id: 8,
+  image: "images/earring2.png",
+  name: "Gold Earrings",
+  price: 200,
+  button: "ADD TO CART",
 };
 let product9 = {
-    id: 9,
-    image: "images/heels.png",
-    name: "Luxury Heels",
-    price: 400,
-    button: "ADD TO CART"
+  id: 9,
+  image: "images/heels.png",
+  name: "Luxury Heels",
+  price: 400,
+  button: "ADD TO CART",
 };
 let product10 = {
-    id: 10,
-    image: "images/heels2.png",
-    name: "IT_Girl Heels",
-    price: 300,
-    button: "ADD TO CART"
+  id: 10,
+  image: "images/heels2.png",
+  name: "IT_Girl Heels",
+  price: 300,
+  button: "ADD TO CART",
 };
 let product11 = {
-    id: 11,
-    image: "images/heels3.png",
-    name: "Perfect Heels",
-    price: 200,
-    button: "ADD TO CART"
+  id: 11,
+  image: "images/heels3.png",
+  name: "Perfect Heels",
+  price: 200,
+  button: "ADD TO CART",
 };
 let product12 = {
-    id: 12,
-    image: "images/jewelry.png",
-    name: "Luxury Neckpiece",
-    price: 500,
-    button: "ADD TO CART"
+  id: 12,
+  image: "images/jewelry.webp",
+  name: "Luxury Neckpiece",
+  price: 500,
+  button: "ADD TO CART",
 };
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 document.getElementById("navbar").innerHTML = `
@@ -94,23 +94,21 @@ document.getElementById("navbar").innerHTML = `
     </div>
 `;
 window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-        document.querySelector(".navbar").classList.add("scrolled");
-    } else {
-        document.querySelector(".navbar").classList.remove("scrolled");
-    }
-
+  if (window.scrollY > 50) {
+    document.querySelector(".navbar").classList.add("scrolled");
+  } else {
+    document.querySelector(".navbar").classList.remove("scrolled");
+  }
 });
 
 const themeBtn = document.querySelector("#themeBtn");
 themeBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark");
-    if (document.body.classList.contains("dark")) {
-        themeBtn.textContent = "☀️";
-    } else {
-        themeBtn.textContent = "🌙";
-    }
-
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    themeBtn.textContent = "☀️";
+  } else {
+    themeBtn.textContent = "🌙";
+  }
 });
 document.getElementById("product1").innerHTML = `
     <img src="${product1.image}">
@@ -233,46 +231,49 @@ document.getElementById("product12").innerHTML = `
     </button>
 `;
 function addToCart(product) {
-    let existingProduct = cart.find(function(item) {
-        return item.id === product.id; });
-        if (existingProduct) {
-            existingProduct.quantity = existingProduct.quantity + 1;
-        } else {
-            cart.push({ 
-                id: product.id, 
-                image: product.image, 
-                name: product.name, 
-                price: product.price, 
-                quantity: 1 }); 
+  let existingProduct = cart.find(function (item) {
+    return item.id === product.id;
+  });
+  if (existingProduct) {
+    existingProduct.quantity = existingProduct.quantity + 1;
+  } else {
+    cart.push({
+      id: product.id,
+      image: product.image,
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+    });
+  }
+  saveCart();
+  updateCartCount();
+  displayCart();
 }
-         saveCart(); 
-         updateCartCount(); 
-         displayCart();
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
-function saveCart() { 
-    localStorage.setItem("cart", JSON.stringify(cart)); 
+function updateCartCount() {
+  let cartCount = document.getElementById("cartCount");
+  let totalQuantity = 0;
+  cart.forEach(function (item) {
+    totalQuantity = totalQuantity + item.quantity;
+  });
+  cartCount.textContent = totalQuantity;
 }
-function updateCartCount() { 
-    let cartCount = document.getElementById("cartCount"); 
-    let totalQuantity = 0; 
-    cart.forEach(function(item) { 
-        totalQuantity = totalQuantity + item.quantity; 
-});
-cartCount.textContent = totalQuantity; 
-}
-function displayCart() { 
-    let cartContainer = document.getElementById("cart"); 
-    if (cart.length === 0) { 
-        cartContainer.innerHTML = ` 
+function displayCart() {
+  let cartContainer = document.getElementById("cart");
+  if (cart.length === 0) {
+    cartContainer.innerHTML = ` 
         <h2 class="cart-title"> Shopping Cart </h2> 
         <p class="empty-cart"> Your cart is empty. </p> `;
-        return; 
-}
-cartContainer.innerHTML = ` 
-<h2 class="cart-title"> Shopping Cart </h2> `; 
-cart.forEach(function(item) { 
-    let cartItem = document.createElement("div"); 
-    cartItem.className = "cart-item"; cartItem.innerHTML = `
+    return;
+  }
+  cartContainer.innerHTML = ` 
+<h2 class="cart-title"> Shopping Cart </h2> `;
+  cart.forEach(function (item) {
+    let cartItem = document.createElement("div");
+    cartItem.className = "cart-item";
+    cartItem.innerHTML = `
      <img src="${item.image}">
       <div class="cart-info">
          <h3>${item.name}</h3> 
@@ -282,48 +283,54 @@ cart.forEach(function(item) {
      <button onclick="decreaseQuantity(${item.id})"> - </button> 
      <span> ${item.quantity} </span> 
      <button onclick="increaseQuantity(${item.id})"> + </button> 
-     </div> `; 
-cartContainer.appendChild(cartItem); });
-      let total = 0;
-cart.forEach(function(item) {
-    total = total + (item.price * item.quantity);
-});
-     let totalDiv = document.createElement("div"); 
-totalDiv.innerHTML = ` 
+     </div> `;
+    cartContainer.appendChild(cartItem);
+  });
+  let total = 0;
+  cart.forEach(function (item) {
+    total = total + item.price * item.quantity;
+  });
+  let totalDiv = document.createElement("div");
+  totalDiv.innerHTML = ` 
     <p class="cart-total">Total: $${total}.00</p> 
     <button class="checkout" onclick="checkout()">CHECKOUT</button>
-`; 
-cartContainer.appendChild(totalDiv);
+`;
+  cartContainer.appendChild(totalDiv);
 }
-function increaseQuantity(productId) { 
-    let product = cart.find(function(item) {
-         return item.id === productId; }); 
-         product.quantity = product.quantity + 1; 
-         saveCart(); 
-         updateCartCount(); 
-         displayCart(); }
-function decreaseQuantity(productId) { 
-    let product = cart.find(function(item) {
-         return item.id === productId; }); 
-         product.quantity = product.quantity - 1; 
-         if (product.quantity === 0) { 
-            cart = cart.filter(function(item) {
-                 return item.id !== productId; }); 
+function increaseQuantity(productId) {
+  let product = cart.find(function (item) {
+    return item.id === productId;
+  });
+  product.quantity = product.quantity + 1;
+  saveCart();
+  updateCartCount();
+  displayCart();
 }
-           saveCart(); 
-           updateCartCount(); 
-           displayCart(); 
+function decreaseQuantity(productId) {
+  let product = cart.find(function (item) {
+    return item.id === productId;
+  });
+  product.quantity = product.quantity - 1;
+  if (product.quantity === 0) {
+    cart = cart.filter(function (item) {
+      return item.id !== productId;
+    });
+  }
+  saveCart();
+  updateCartCount();
+  displayCart();
 }
-function checkout() { 
-    alert("Order successful!"); 
-    cart = []; 
-    saveCart(); 
-    updateCartCount(); 
-    displayCart(); 
+function checkout() {
+  alert("Order successful!");
+  cart = [];
+  saveCart();
+  updateCartCount();
+  displayCart();
 }
-document.getElementById("cartIcon").addEventListener("click", function() { 
-    document.getElementById("cart").scrollIntoView({ 
-        behavior: "smooth" });
- }); 
- displayCart(); 
- updateCartCount();
+document.getElementById("cartIcon").addEventListener("click", function () {
+  document.getElementById("cart").scrollIntoView({
+    behavior: "smooth",
+  });
+});
+displayCart();
+updateCartCount();
