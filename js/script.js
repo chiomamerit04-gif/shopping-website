@@ -1,83 +1,83 @@
 let product1 = {
     id: 1,
-    image: "/images/bag.png",
+    image: "images/bag.png",
     name: "Fashion Bag",
     price: 800,
     button: "ADD TO CART"
 };
 let product2 = {
     id: 2,
-    image: "/images/bag2.png",
+    image: "images/bag2.png",
     name: "LV Bag",
     price: 1500,
     button: "ADD TO CART"
 };
 let product3 = {
     id: 3,
-    image: "/images/dresses.png",
+    image: "images/dresses.png",
     name: "Floral Dress",
     price: 120,
     button: "ADD TO CART"
 };
 let product4 = {
     id: 4,
-    image: "/images/dresses2.png",
+    image: "images/dresses2.png",
     name: "Party Dress",
     price: 160,
     button: "ADD TO CART"
 };
 let product5 = {
     id: 5,
-    image: "/images/dresses3.png",
+    image: "images/dresses3.png",
     name: "Chic Dress",
     price: 200,
     button: "ADD TO CART"
 };
 let product6 = {
     id: 6,
-    image: "/images/dresses4.png",
+    image: "images/dresses4.png",
     name: "Dinner Dress",
     price: 600,
     button: "ADD TO CART"
 };
 let product7 = {
     id: 7,
-    image: "/images/earring.png",
+    image: "images/earring.png",
     name: "Silver Earrings",
     price: 200,
     button: "ADD TO CART"
 };
 let product8 = {
     id: 8,
-    image: "/images/earring2.png",
+    image: "images/earring2.png",
     name: "Gold Earrings",
     price: 200,
     button: "ADD TO CART"
 };
 let product9 = {
     id: 9,
-    image: "/images/heels.png",
+    image: "images/heels.png",
     name: "Luxury Heels",
     price: 400,
     button: "ADD TO CART"
 };
 let product10 = {
     id: 10,
-    image: "/images/heels2.png",
+    image: "images/heels2.png",
     name: "IT_Girl Heels",
     price: 300,
     button: "ADD TO CART"
 };
 let product11 = {
     id: 11,
-    image: "/images/heels3.png",
+    image: "images/heels3.png",
     name: "Perfect Heels",
     price: 200,
     button: "ADD TO CART"
 };
 let product12 = {
     id: 12,
-    image: "/images/jewelry.png",
+    image: "images/jewelry.png",
     name: "Luxury Neckpiece",
     price: 500,
     button: "ADD TO CART"
