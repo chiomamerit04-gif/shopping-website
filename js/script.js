@@ -85,11 +85,33 @@ let product12 = {
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 document.getElementById("navbar").innerHTML = `
     <div class="logo">Shop With Big Mama</div>
+
+    <button id="themeBtn">🌙</button>
+
     <div class="cart" id="cartIcon">
         🛒
-       <span class="cart-count" id="cartCount">0</span>
-     </div>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
 `;
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+        document.querySelector(".navbar").classList.add("scrolled");
+    } else {
+        document.querySelector(".navbar").classList.remove("scrolled");
+    }
+
+});
+
+const themeBtn = document.querySelector("#themeBtn");
+themeBtn.addEventListener("click", function () {
+    document.body.classList.toggle("dark");
+    if (document.body.classList.contains("dark")) {
+        themeBtn.textContent = "☀️";
+    } else {
+        themeBtn.textContent = "🌙";
+    }
+
+});
 document.getElementById("product1").innerHTML = `
     <img src="${product1.image}">
     <h3>${product1.name}</h3>

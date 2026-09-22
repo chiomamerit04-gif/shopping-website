@@ -204,6 +204,42 @@ body {
      text-align: center; 
      color: #888; 
 } 
+.navbar {
+    transition: 0.3s ease;
+}
+.navbar.scrolled {
+    padding: 12px 7%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+body.dark {
+    background-color: #18181b;
+    color: white;
+}
+body.dark .product {
+    background-color: #27272a;
+    color: white;
+}
+
+body.dark #cart {
+    background-color: #27272a;
+    color: white;
+}
+
+body.dark .cart-item {
+    border-bottom-color: #3f3f46;
+}
+
+body.dark .navbar {
+    background: linear-gradient(90deg, #18181b, #3f1d56);
+}
+
+#themeBtn {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
  
 @media (max-width: 900px) { 
     .products { grid-template-columns: repeat(2, 1fr); } 
