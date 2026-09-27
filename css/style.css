@@ -248,4 +248,21 @@ body.dark .navbar {
     .products { grid-template-columns: 1fr; } 
     #cart { width: 92%; padding: 20px; } 
     .cart-item { flex-wrap: wrap; } 
-    .cart-info { min-width: 150px; } }
+    .cart-info { min-width: 150px; }
+    .products { 
+        grid-template-columns: 1fr; 
+    }
+    .product img {
+        height: 200px;
+    }
+    #cart { 
+        width: 92%; 
+        padding: 20px; 
+    }
+    .cart-item { 
+        flex-wrap: wrap; 
+    }
+    .cart-info { 
+        min-width: 150px; 
+    }
+}
