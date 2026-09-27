@@ -257,6 +257,7 @@ body.dark .navbar {
     padding: 40px 25px;
     border-radius: 15px;
     text-align: center;
+    color: #111;
 }
 
 .success-icon {
@@ -273,9 +274,11 @@ body.dark .navbar {
 }
 .success-box h2 {
     margin-bottom: 10px;
+     color: #111;
 }
 .success-box p {
     margin-bottom: 25px;
+     color: #111;
 }
 .success-box button {
     padding: 12px 25px;
@@ -284,6 +287,15 @@ body.dark .navbar {
     background: #ff3d00;
     color: white;
     cursor: pointer;
+}
+body.dark .success-box {
+    background: #27272a;
+    color: white;
+}
+
+body.dark .success-box h2,
+body.dark .success-box p {
+    color: white;
 }
 @media (max-width: 900px) { 
     .products { grid-template-columns: repeat(2, 1fr); } 
