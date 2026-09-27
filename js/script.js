@@ -320,11 +320,15 @@ function decreaseQuantity(productId) {
   displayCart();
 }
 function checkout() {
-  alert("Order successful!");
+  document.getElementById("successMessage").style.display = "flex";
   cart = [];
   saveCart();
   updateCartCount();
   displayCart();
+}
+
+function closeSuccess() {
+  document.getElementById("successMessage").style.display = "none";
 }
 document.getElementById("cartIcon").addEventListener("click", function () {
   document.getElementById("cart").scrollIntoView({
