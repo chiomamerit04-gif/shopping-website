@@ -1,5 +1,4 @@
 let product1 = {
-  id: 1,
   image: "images/bag.webp",
   name: "Fashion Bag",
   price: 800,
